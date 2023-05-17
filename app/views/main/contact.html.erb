@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h1>Contact.html.erb</h1>
+  <h1>Contact Devon</h1>
   <%= form_with(model: @contact, url: contacts_create_path, method: :post) do |f| %>
     <% if flash[:success] %>
       <div class="alert alert-success">
@@ -15,16 +15,19 @@
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control', required: true %>
     </div>
+    <br>
     <div class="form-group">
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control', required: true %>
     </div>
+    <br>
     <div class="form-group">
       <%= f.label :message %>
       <%= f.text_area :message, class: 'form-control', rows: 5, required: true %>
     </div>
+    <br>
     <div class="form-group">
-      <%= f.submit 'Send Message', class: 'btn btn-primary' %>
+      <%= f.submit 'Send Message', class: 'btn btn-primary text-bg-dark p-3' %>
     </div>
   <% end %>
 </div>
