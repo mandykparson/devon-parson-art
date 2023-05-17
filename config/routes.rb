@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # get 'contacts/new'
+  post 'contacts/create', to: 'contacts#create', as: 'contacts_create'
   root 'main#home'
   get '/about', to: 'main#about'
   get '/gallery', to: 'main#gallery'
