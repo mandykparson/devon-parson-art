@@ -1,5 +1,8 @@
 name: Upload Website
 
+before_script:
+  - gem install aws-sdk-s3
+
 on:
   push:
     branches:
